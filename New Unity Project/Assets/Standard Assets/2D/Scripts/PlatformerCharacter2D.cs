@@ -81,7 +81,8 @@ namespace UnityStandardAssets._2D
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+				NotificationCenter.DefaultCenter().PostNotification(this, "MueveFondos",move);
 
 				if (m_Rigidbody2D.position.x >= posicionX + distancia) {
 					posicionX = m_Rigidbody2D.position.x + distancia;
