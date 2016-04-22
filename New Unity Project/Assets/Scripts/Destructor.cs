@@ -15,7 +15,8 @@ public class Destructor : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
-			NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeHaMuerto");
+			Debug.Log ("PerdioJuego");
+			NotificationCenter.DefaultCenter().PostNotification(this, "PerdioJuego");
 			GameObject personaje = GameObject.Find("CharacterRobotBoy");
 			personaje.SetActive(false);
 		}else{

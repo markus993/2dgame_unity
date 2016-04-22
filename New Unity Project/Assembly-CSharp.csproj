@@ -46,14 +46,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AspectUtility.cs" />
+     <Compile Include="Assets\Scripts\BotonCargarEscena.cs" />
      <Compile Include="Assets\Scripts\ControladorPersonaje1.cs" />
      <Compile Include="Assets\Scripts\Destructor.cs" />
+     <Compile Include="Assets\Scripts\EstadoJuego.cs" />
      <Compile Include="Assets\Scripts\Generador.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Puntuacion.cs" />
      <Compile Include="Assets\Scripts\Scroll.cs" />
      <Compile Include="Assets\Scripts\SeguirPersonaje.cs" />
+     <Compile Include="Assets\Scripts\fondoScreen.cs" />
      <Compile Include="Assets\Scripts\musicplayer.cs" />
+     <Compile Include="Assets\Scripts\timer.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

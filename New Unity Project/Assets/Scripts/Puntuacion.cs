@@ -26,12 +26,20 @@ public class Puntuacion : MonoBehaviour {
 
         NotificationCenter.DefaultCenter().PostNotification(this, "CambioColorScreen", puntuacion);
         ActualizarMarcador();
+		if (puntuacion >= 100) {
+			Debug.Log ("GANO");
+			NotificationCenter.DefaultCenter().PostNotification(this, "GanoJuego", puntuacion);
+		}
 	}
 
 	void ActualizarMarcador(){
 		marcador.text = puntuacion.ToString();
 	}
-	
+
+	void PersonajeHaMuerto(Notification notificacion){
+		marcador.text = puntuacion.ToString();
+	}
+
 	// Update is called once per frame
 	void Update () {
 	

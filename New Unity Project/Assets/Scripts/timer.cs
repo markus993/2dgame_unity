@@ -5,10 +5,11 @@ public class timer : MonoBehaviour {
     
     public TextMesh reloj;
     private int paso;
-    private int tiempo = 60;
+	public int tiempo = 60;
 
     // Use this for initialization
-    void Start () {
+	void Start () {
+		NotificationCenter.DefaultCenter().AddObserver(this, "GanoJuego",tiempo);
     }
 	
 	// Update is called once per frame
@@ -16,5 +17,10 @@ public class timer : MonoBehaviour {
     {
         paso = (int)Time.time;
         reloj.text = (tiempo - paso) + "";
+		if ((tiempo - paso) <= 0) {
+			NotificationCenter.DefaultCenter().PostNotification(this, "PerdioJuego", "Tiempo");
+		}
     }
+
+
 }
