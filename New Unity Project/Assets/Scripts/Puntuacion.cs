@@ -23,7 +23,9 @@ public class Puntuacion : MonoBehaviour {
 	void IncrementarPuntos(Notification notificacion){
 		int puntosAIncrementar = (int)notificacion.data;
 		puntuacion+=puntosAIncrementar;
-		ActualizarMarcador();
+
+        NotificationCenter.DefaultCenter().PostNotification(this, "CambioColorScreen", puntuacion);
+        ActualizarMarcador();
 	}
 
 	void ActualizarMarcador(){
