@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Destructor : MonoBehaviour {
+	public TextMesh mensaje;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,10 @@ public class Destructor : MonoBehaviour {
 			NotificationCenter.DefaultCenter().PostNotification(this, "PerdioJuego");
 			GameObject personaje = GameObject.Find("CharacterRobotBoy");
 			personaje.SetActive(false);
+			mensaje.text = "Has Perdido";
+			System.Threading.Thread.Sleep(2000); 
+			mensaje.text = "";
+			Application.LoadLevel("Portada");
 		}else{
 			Destroy(other.gameObject);
 		}
