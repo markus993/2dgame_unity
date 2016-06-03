@@ -33,6 +33,7 @@ public class Puntuacion : MonoBehaviour {
         ActualizarMarcador();
 		if (puntuacion >= 100) {
 			Debug.Log ("GANO");
+			NotificationCenter.DefaultCenter().PostNotification(this, "GanoMensaje");
 			NotificationCenter.DefaultCenter().PostNotification(this, "GanoJuego", puntuacion);
 		}
 	}
